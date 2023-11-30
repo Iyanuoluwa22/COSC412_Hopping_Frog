@@ -396,6 +396,8 @@
 -analyzer:"Library/PackageCache/com.unity.entities@1.0.16/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.SystemGenerator.SystemAPI.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@1.0.16/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.SystemGenerator.SystemAPI.Query.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@1.0.16/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.SystemGenerator.SystemAPI.QueryBuilder.dll"
+"Assets/Scripts/CameraFollowPlayer.cs"
+"Assets/Scripts/CollectCoin.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/playerMovement.cs"
 -langversion:9.0
