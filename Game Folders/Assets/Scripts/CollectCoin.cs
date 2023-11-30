@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CollectCoin : MonoBehaviour
 {
     public int coinsCollected;
     public GameObject[] flyCoins;
     private GameObject coins;
-    public Text text;
+    public TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
     {
         flyCoins = GameObject.FindGameObjectsWithTag("FlyCoin");
         coinsCollected = 0;
         coins = GameObject.Find("Coins");
-        text = coins.GetComponentInChildren<Text>();
+        text = coins.GetComponentInChildren<TextMeshProUGUI>();
         text.text = 0.ToString();
     }
 
