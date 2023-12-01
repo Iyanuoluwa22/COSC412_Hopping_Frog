@@ -24,19 +24,24 @@ public class playerMovement : MonoBehaviour
         GameObject platform = GameObject.Find("Platform");
         onGround = true;
 
-        HorizontalSpeed = 150f * Time.deltaTime;
+        HorizontalSpeed = 125f * Time.deltaTime;
         jumpHeight = 7500f * Time.deltaTime;
         rb.mass = frogMass; // Mass of a Adult Male Frog
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+        rb.freezeRotation = false;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButton("space")) && onGround == true)
         {
             //Move the Rigidbody upwards constantly at speed you define (the green arrow axis in Scene view)
             rb.velocity = transform.up * jumpHeight;
             onGround = false;
+            if (onGround == false)
+            {
+                rb.freezeRotation = true;
+            }
         }
         else if (Input.GetButton("Horizontal"))
         {
@@ -51,6 +56,11 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform") //can also use game.Object.tag if you want to tag multiple objects without changing their names
         {
             onGround = true;
+            Debug.Log(collision.gameObject.transform.localEulerAngles.z);
+        } else if (collision.gameObject.tag == "Tilted Pad")
+        {
+            onGround = true;
+            rb.freezeRotation = false;
         }
     }
 
