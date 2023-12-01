@@ -24,7 +24,7 @@ public class playerMovement : MonoBehaviour
         GameObject platform = GameObject.Find("Platform");
         onGround = true;
 
-        HorizontalSpeed = 100f * Time.deltaTime;
+        HorizontalSpeed = 150f * Time.deltaTime;
         jumpHeight = 7500f * Time.deltaTime;
         rb.mass = frogMass; // Mass of a Adult Male Frog
     }
