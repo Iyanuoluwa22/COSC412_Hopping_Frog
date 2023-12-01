@@ -17,5 +17,12 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         Vector3 newPos = new Vector3(Frog.transform.position.x, Frog.transform.position.y,-10f);
         transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed*Time.deltaTime);
+        float rotate = Frog.GetComponent<Rigidbody2D>().rotation;
+        if (rotate == 0)
+        {
+            rotate = 0;
+        }
+        else rotate *= -1;
+        transform.rotation = new Quaternion(0,0,0,0);
     }
 }

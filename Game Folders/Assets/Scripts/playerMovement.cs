@@ -40,6 +40,7 @@ public class playerMovement : MonoBehaviour
             onGround = false;
             if (onGround == false)
             {
+                transform.rotation = new Quaternion(0, 0, 0,0);
                 rb.freezeRotation = true;
             }
         }
@@ -47,6 +48,7 @@ public class playerMovement : MonoBehaviour
         {
             //rb.velocity = new Vector2(Input.GetAxis("Horizontal") * playerSpeed,0);
             transform.Translate(Input.GetAxis("Horizontal") * HorizontalSpeed, 0, 0);
+            rb.freezeRotation = true;
         }
     }
 
@@ -56,11 +58,12 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform") //can also use game.Object.tag if you want to tag multiple objects without changing their names
         {
             onGround = true;
-            Debug.Log(collision.gameObject.transform.localEulerAngles.z);
+            rb.rotation = collision.gameObject.transform.localEulerAngles.z;
+            Debug.Log(rb.rotation);
+            rb.freezeRotation = true;
         } else if (collision.gameObject.tag == "Tilted Pad")
         {
             onGround = true;
-            rb.freezeRotation = false;
         }
     }
 
