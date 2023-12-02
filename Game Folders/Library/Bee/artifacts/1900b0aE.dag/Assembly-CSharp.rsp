@@ -369,6 +369,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Physics.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Physics.Hybrid.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Physics.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Profiling.Core.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Scenes.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Scenes.ref.dll"
