@@ -1,0 +1,28 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      39
+    ],
+    "SourceCsetId": 40,
+    "DestinationCsetId": 39,
+    "FileConflicts": [
+      {
+        "Path": "/Assets/Sprites/Froggy/Frog Daddy.prefab",
+        "ItemId": 674,
+        "ParentItemId": 630,
+        "BaseRevId": 684,
+        "SourceRevId": 774,
+        "DestinationRevId": 765
+      },
+      {
+        "Path": "/ProjectSettings/EntitiesClientSettings.asset",
+        "ItemId": 141,
+        "ParentItemId": 132,
+        "BaseRevId": 732,
+        "SourceRevId": 766,
+        "DestinationRevId": 732
+      }
+    ]
+  }
+]
