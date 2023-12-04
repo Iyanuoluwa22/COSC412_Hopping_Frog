@@ -14,6 +14,7 @@ public class CollectCoin : MonoBehaviour
     void Start()
     {
         flyCoins = GameObject.FindGameObjectsWithTag("FlyCoin");
+        for(int i = 0; i < flyCoins.Length; i++) flyCoins[i].GetComponent<Collider2D>().isTrigger = true;
         coinsCollected = 0;
         coins = GameObject.Find("Coins");
         text = coins.GetComponentInChildren<TextMeshProUGUI>();
@@ -21,7 +22,7 @@ public class CollectCoin : MonoBehaviour
     }
 
     
-    void OnCollisionEnter2D(Collision2D collision) //this function makes sure that when the ball is touching the ground then onGround is true
+    void OnTriggerEnter2D(Collider2D collision) //this function makes sure that when the ball is touching the ground then onGround is true
     {
         if (collision.gameObject.tag == "FlyCoin") //can also use game.Object.tag if you want to tag multiple objects without changing their names
         {

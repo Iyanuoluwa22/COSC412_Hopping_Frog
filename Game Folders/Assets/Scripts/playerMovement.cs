@@ -32,7 +32,7 @@ public class playerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.freezeRotation = false;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetButton("space")) && onGround == true)
         {
             //Move the Rigidbody upwards constantly at speed you define (the green arrow axis in Scene view)
@@ -61,9 +61,6 @@ public class playerMovement : MonoBehaviour
             rb.rotation = collision.gameObject.transform.localEulerAngles.z;
             Debug.Log(rb.rotation);
             rb.freezeRotation = true;
-        } else if (collision.gameObject.tag == "Tilted Pad")
-        {
-            onGround = true;
         }
     }
 
